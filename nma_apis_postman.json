@@ -1,0 +1,1765 @@
+{
+	"info": {
+		"name": "NMA",
+		"_postman_id": "",
+		"description": "Basic success response\n{\n\tcode: 200,\n\tdata: {}\n}\n\nBasic error response\n{\n\tcode: 500,\n\tmessage: \"\",\n}\n\nBasice fields error response\n{\n\tcode: 401,\n\terror: [\n\t\t{field: \"\", message: \"\"},\n\t\t{field: \"\", message: \"\"}\n\t]\n}",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/nma/api/patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "/nma/api/patient",
+					"path": [
+						"nma",
+						"api",
+						"patient"
+					]
+				},
+				"description": "Get all patients"
+			},
+			"response": [
+				{
+					"id": "12aca72d-ee1e-4986-bcba-4c130fb3b89c",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/nma/api/patient",
+							"path": [
+								"nma",
+								"api",
+								"patient"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 1,\n            \"patientNo\": 1,\n            \"name\": \"Jack\",\n            \"birth\": \"1989-09-02\",\n            \"gender\": \"M\",\n            \"address\": \"xxxxxxxxxxx\",\n            \"tel\": \"xxxxxxxx\",\n            \"bloodType\": \"AB\",\n            \"bloodSurger\": 2.7,\n            \"ldl\": 1.8,\n            \"hdl\": 2.6,\n            \"triglyceride\": 3.7,\n            \"riskHeartDisease\": \"L\",\n            \"primaryDoctor\": {\n                \"seq\": 2,\n                \"annualSalary\": 70000,\n                \"specialty\": \"xxxxxxx\",\n                \"employee\": {\n                    \"seq\": 4,\n                    \"emp_no\": 4,\n                    \"ssn\": \"xxxxxxxxx\",\n                    \"name\": \"Jack\",\n                    \"gender\": \"M\",\n                    \"address\": \"xxxxxx\",\n                    \"tel\": \"xxxxxxxx\"\n                }\n            }\n        },\n        {\n            \"seq\": 2,\n            \"patientNo\": 2,\n            \"name\": \"Noujon\",\n            \"birth\": \"1989-09-02\",\n            \"gender\": \"M\",\n            \"address\": \"xxxxxxxxxxx\",\n            \"tel\": \"xxxxxxxx\",\n            \"bloodType\": \"AB\",\n            \"bloodSurger\": 2.7,\n            \"idl\": 1.8,\n            \"hdl\": 2.6,\n            \"triglyceride\": 3.7,\n            \"riskHeartDisease\": \"N\",\n            \"primaryDoctor\": {\n                \"seq\": 3,\n                \"annualSalary\": 70000,\n                \"specialty\": \"xxxxxxx\",\n                \"employee\": {\n                    \"seq\": 5,\n                    \"emp_no\": 5,\n                    \"ssn\": \"xxxxxxxxx\",\n                    \"name\": \"Hudson\",\n                    \"gender\": \"F\",\n                    \"address\": \"xxxxxx\",\n                    \"tel\": \"xxxxxxxx\"\n                }\n            }\n        }\n    ]\n}"
+				},
+				{
+					"id": "f88c3236-f82a-4449-b5dd-8b742ea2e953",
+					"name": "Test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Jack\",\n\t\"birth\": \"1989-09-02\",\n\t\"ssn\": \"111122333\",\n\t\"gender\": \"M\",\n\t\"address\": \"202 Central Ave\",\n\t\"tel\": \"2087771123\",\n\t\"bloodType\": \"AB\",\n\t\"bloodSurger\": 2.7,\n\t\"ldl\": 1.8,\n\t\"hdl\": 2.6,\n\t\"triglyceride\": 3.7,\n\t\"primaryDoctor\": {\n\t\t\"seq\": 1\n\t},\n\t\"illnesses\": [2],\n\t\"allergies\": [1, 3, 4]\n}"
+						},
+						"url": {
+							"raw": "/nma/api/patient",
+							"path": [
+								"nma",
+								"api",
+								"patient"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": ""
+				},
+				{
+					"id": "17fd0caf-a68b-4842-95e4-eed6537c58fc",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "/nma/api/patient",
+							"path": [
+								"nma",
+								"api",
+								"patient"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 1,\n            \"patientNo\": 1,\n            \"ssn\": \"123456789\",\n            \"name\": \"Freddy\",\n            \"gender\": \"M\",\n            \"birth\": \"1989-08-12\",\n            \"address\": \"222 Highland St.\",\n            \"tel\": \"2016662222\",\n            \"bloodType\": \"O\",\n            \"bloodSurger\": 10.2,\n            \"ldl\": 2.7,\n            \"hdl\": 6.5,\n            \"triglyceride\": 12.3,\n            \"riskHeartDisease\": \"N\",\n            \"primaryDoctor\": {\n                \"seq\": 1,\n                \"annualSalary\": 80000,\n                \"specialty\": \"Curing\",\n                \"employee\": {\n                    \"seq\": 4,\n                    \"empNo\": 4,\n                    \"ssn\": \"000011222\",\n                    \"name\": \"Judy\",\n                    \"gender\": \"F\",\n                    \"address\": \"111 Whatever Ave\",\n                    \"tel\": \"9062864473\"\n                }\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/patient/40",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/patient/40",
+					"path": [
+						"nma",
+						"api",
+						"patient",
+						"40"
+					]
+				},
+				"description": "Get specific patient by seq"
+			},
+			"response": [
+				{
+					"id": "74a91fed-a725-4a5d-aca3-bffbcc55188a",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/api/nma/patient/1",
+							"path": [
+								"api",
+								"nma",
+								"patient",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"seq\": 1,\n        \"patient_no\": 1,\n        \"name\": \"Marry\",\n        \"birth\": \"1989-09-02\",\n        \"gender\": \"F\",\n        \"address\": \"xxxxxxxxxxx\",\n        \"tel\": \"xxxxxxxx\",\n        \"bloodType\": \"AB\",\n        \"bloodSurger\": 2.7,\n        \"ldl\": 1.8,\n        \"hdl\": 2.6,\n        \"triglyceride\": 3.7,\n        \"riskHeartDisease\": \"L\",\n        \"primaryDoctor\": {\n            \"seq\": 2,\n            \"annualSalary\": 70000,\n            \"specialty\": \"xxxxxxx\",\n            \"employee\": {\n                \"seq\": 4,\n                \"empNo\": 4,\n                \"ssn\": \"xxxxxxxxx\",\n                \"name\": \"Jack\",\n                \"gender\": \"M\",\n                \"address\": \"xxxxxx\",\n                \"tel\": \"xxxxxxxx\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Tina\",\n\t\"birth\": \"1991-07-12\",\n\t\"ssn\": \"111333\",\n\t\"gender\": \"F\",\n\t\"address\": \"202 Central Ave\",\n\t\"tel\": \"2087733123\",\n\t\"bloodType\": \"AB\",\n\t\"bloodSurger\": 2.7,\n\t\"ldl\": 1.8,\n\t\"hdl\": 2.6,\n\t\"triglyceride\": 3.7,\n\t\"primaryDoctorSeq\": 1,\n\t\"illnesses\": [2],\n\t\"allergies\": [1, 3, 4]\n}"
+				},
+				"url": {
+					"raw": "/nma/api/patient",
+					"path": [
+						"nma",
+						"api",
+						"patient"
+					]
+				},
+				"description": "Insert a new patient, including his/her basic information and medical information and illness history and allergy history"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/patient/doctor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"patientSeq\": 1,\n\t\"doctorSeq\": 1\n}"
+				},
+				"url": {
+					"raw": "/nma/api/patient/doctor",
+					"path": [
+						"nma",
+						"api",
+						"patient",
+						"doctor"
+					]
+				},
+				"description": "Assign doctor to a patient"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/patient/doctor?patientSeq=1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/patient/doctor?patientSeq=1",
+					"path": [
+						"nma",
+						"api",
+						"patient",
+						"doctor"
+					],
+					"query": [
+						{
+							"key": "patientSeq",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": "Remove patient's primary doctor"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/patient/illness?patientSeq=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/patient/illness?patientSeq=10",
+					"path": [
+						"nma",
+						"api",
+						"patient",
+						"illness"
+					],
+					"query": [
+						{
+							"key": "patientSeq",
+							"value": "10",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get patient's illness history"
+			},
+			"response": [
+				{
+					"id": "af41fde9-60ca-4f50-856e-e4d73cf208d1",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/api/nma/patient/illness?patientSeq=1",
+							"path": [
+								"api",
+								"nma",
+								"patient",
+								"illness"
+							],
+							"query": [
+								{
+									"key": "patientSeq",
+									"value": "1",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"patient\": {\n            \"name\": \"Jack\"\n        },\n        \"illnesses\": [\n            {\n                \"doctor\": {\n                    \"name\": \"Marry\"\n                },\n                \"code\": \"1334\",\n                \"name\": \"Headache\",\n                \"description\": \"Hahahahahah\",\n                \"dateDiagnosis\": \"2015-02-24\"\n            },\n            {\n                \"doctor\": {\n                \t\"name\": \"Leo\"}\n                \t,\n                \"code\": \"1542\",\n                \"name\": \"Cough\",\n                \"description\": \"Woooooooooo\",\n                \"dateDiagnosis\": \"2016-07-15\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/patient/allergy?patientSeq=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/patient/allergy?patientSeq=10",
+					"path": [
+						"nma",
+						"api",
+						"patient",
+						"allergy"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"description": "Patient's seq num",
+							"type": "text"
+						},
+						{
+							"key": "patientSeq",
+							"value": "10",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get patient's allergy history"
+			},
+			"response": [
+				{
+					"id": "83ddfeb5-a775-468c-bcd5-7301d108c7a7",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/api/nma/patient/allergy?patientSeq=1",
+							"path": [
+								"api",
+								"nma",
+								"patient",
+								"allergy"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"description": "Patient's seq num",
+									"type": "text"
+								},
+								{
+									"key": "patientSeq",
+									"value": "1",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"patient\": {\n            \"name\": \"Jack\"\n        },\n        \"allergy\": [\n            {\n                \"doctor\": {\n                    \"name\": \"Marry\"\n                },\n                \"code\": \"1334\",\n                \"name\": \"Nose allergy\",\n                \"description\": \"Hahahahahah\",\n                \"dateDiagnosis\": \"2015-02-24\"\n            },\n            {\n                                \"doctor\": {\n                    \"name\": \"Leo\"\n                },\n                \"code\": \"1542\",\n                \"name\": \"Wind allergy\",\n                \"description\": \"Woooooooooo\",\n                \"dateDiagnosis\": \"2016-07-15\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/support_staff",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/support_staff",
+					"path": [
+						"nma",
+						"api",
+						"support_staff"
+					]
+				},
+				"description": "View all support staffs"
+			},
+			"response": [
+				{
+					"id": "3e15f733-1ee0-47cf-a16b-4cf2364ace67",
+					"name": "/nma/api/support_staff",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/support_staff",
+							"path": [
+								"nma",
+								"api",
+								"support_staff"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"annualSalary\": 70000,\n            \"employee\": {\n                \"seq\": 2,\n                \"empNo\": 2,\n                \"ssn\": \"xxxxxxxxx\",\n                \"name\": \"Jack\",\n                \"gender\": \"M\",\n                \"address\": \"xxxxxxxxx\",\n                \"tel\": \"xxxxxxx\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/physician",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/physician",
+					"path": [
+						"nma",
+						"api",
+						"physician"
+					]
+				},
+				"description": "Get all physicians(doctors)"
+			},
+			"response": [
+				{
+					"id": "0afaf79d-18e9-40b9-9ee9-5dca63c1848b",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/physician",
+							"path": [
+								"nma",
+								"api",
+								"physician"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"annualSalary\": 70000,\n            \"specialty\": \"xxxxxxxxxxx\",\n            \"employee\": {\n                \"seq\": 2,\n                \"empNo\": 2,\n                \"ssn\": \"xxxxxxxxx\",\n                \"name\": \"Jack\",\n                \"gender\": \"M\",\n                \"address\": \"xxxxxxxxx\",\n                \"tel\": \"xxxxxxx\"\n            }\n        },\n        {\n            \"annualSalary\": 70000,\n            \"specialty\": \"xxxxxxxxxxx\",\n            \"employee\": {\n                \"seq\": 3,\n                \"empNo\": 3,\n                \"ssn\": \"xxxxxxxxx\",\n                \"name\": \"Marry\",\n                \"gender\": \"F\",\n                \"address\": \"xxxxxxxxx\",\n                \"tel\": \"xxxxxxx\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/nurse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/nurse",
+					"path": [
+						"nma",
+						"api",
+						"nurse"
+					]
+				},
+				"description": "View all nurses"
+			},
+			"response": [
+				{
+					"id": "548af1c7-e401-49dd-a9f9-4ce71341fcb9",
+					"name": "/nma/api/nurse",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/nurse",
+							"path": [
+								"nma",
+								"api",
+								"nurse"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 2,\n            \"annualSalary\": 40000,\n            \"grade\": 80,\n            \"year\": 2,\n            \"employee\": {\n                \"seq\": 5,\n                \"empNo\": 5,\n                \"ssn\": \"xxxxxxxxx\",\n                \"name\": \"Marry\",\n                \"gender\": \"F\",\n                \"address\": \"xxxxxxxxx\",\n                \"tel\": \"xxxxxxx\"\n            },\n            \"surgeryType\": {\n                \"seq\": 20,\n                \"code\": \"xxxxx\",\n                \"category\": \"H\",\n                \"specialNeed\": \"xxxxxxxxxx\",\n                \"anatomicalLocation\": \"xxxxxxxxx\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgeon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgeon",
+					"path": [
+						"nma",
+						"api",
+						"surgeon"
+					]
+				},
+				"description": "View all surgeons"
+			},
+			"response": [
+				{
+					"id": "48b936e0-41f2-4e28-9004-3e5158507158",
+					"name": "/nma/api/surgeon",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/surgeon",
+							"path": [
+								"nma",
+								"api",
+								"surgeon"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"contractType\": \"A\",\n            \"contractYear\": 5,\n            \"specialty\": \"xxxxxxxxxxx\",\n            \"employee\": {\n                \"seq\": 2,\n                \"empNo\": 2,\n                \"ssn\": \"xxxxxxxxx\",\n                \"name\": \"Jack\",\n                \"gender\": \"M\",\n                \"address\": \"xxxxxxxxx\",\n                \"tel\": \"xxxxxxx\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/patient/available?datetime=2018-08-12 09:00:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/patient/available?datetime=2018-08-12 09:20:00",
+					"path": [
+						"nma",
+						"api",
+						"patient",
+						"available"
+					],
+					"query": [
+						{
+							"key": "datetime",
+							"value": "2018-08-12 09:20:00",
+							"equals": true
+						}
+					]
+				},
+				"description": "View all available patient for consultation at the given time"
+			},
+			"response": [
+				{
+					"id": "2710eded-56cf-44bb-a46a-0f97b13eebb8",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/available_patient?datetime=2018-08-12 09:00:00",
+							"path": [
+								"nma",
+								"api",
+								"available_patient"
+							],
+							"query": [
+								{
+									"key": "datetime",
+									"value": "2018-08-12 09:00:00",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 2,\n            \"name\": \"Jack\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/physician/available?datetime=2018-08-12 09:00:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/physician/available?datetime=2018-08-12 09:30:00",
+					"path": [
+						"nma",
+						"api",
+						"physician",
+						"available"
+					],
+					"query": [
+						{
+							"key": "datetime",
+							"value": "2018-08-12 09:30:00",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get all available doctor at the given time"
+			},
+			"response": [
+				{
+					"id": "f437d170-2d4d-4bb7-8d2b-60a0706ebad1",
+					"name": "/nma/api/available_doctor?datetime=2018-08-12 09:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/available_doctor?datetime=2018-08-12 09:00:00",
+							"path": [
+								"nma",
+								"api",
+								"available_doctor"
+							],
+							"query": [
+								{
+									"key": "datetime",
+									"value": "2018-08-12 09:00:00",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n\t\"code\": 200,\n\t\"data\": [\n\t\t{\n\t\t\t\"seq\": 5,\n\t\t\t\"employee\": {\n\t\t\t\t\"name\": \"Mark\"\n\t\t\t}\n\t\t}\n\t\t]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/consultation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"patientSeq\": 1,\n\t\"doctorSeq\": 3,\n\t\"datetime\": \"2017-07-12 15:00:00\"\n}"
+				},
+				"url": {
+					"raw": "/nma/api/consultation",
+					"path": [
+						"nma",
+						"api",
+						"consultation"
+					]
+				},
+				"description": "Make an appointment with doctor"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/consultation?doctorSeq=1&date=2016-07-23",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/consultation?doctorSeq=1&date=2018-08-12",
+					"path": [
+						"nma",
+						"api",
+						"consultation"
+					],
+					"query": [
+						{
+							"key": "doctorSeq",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "date",
+							"value": "2018-08-12",
+							"equals": true
+						}
+					]
+				},
+				"description": "View scheduled per doctor and per day"
+			},
+			"response": [
+				{
+					"id": "31cefc48-f6c7-46ae-9d18-5c6e4ca76800",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/consultation?doctorSeq=1&date=2016-07-23",
+							"path": [
+								"nma",
+								"api",
+								"consultation"
+							],
+							"query": [
+								{
+									"key": "doctorSeq",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "2016-07-23",
+									"equals": true,
+									"description": "which day"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"datetime\": \"2016-07-23 08:30:00\",\n            \"doctor\": {\n                \"name\": \"Jack\"\n            },\n            \"patient\": {\n                \"name\": \"Hanrry\"\n            }\n        },\n        {\n            \"datetime\": \"2016-07-23 10:30:00\",\n            \"doctor\": {\n                \"name\": \"Jack\"\n            },\n            \"patient\": {\n                \"name\": \"Muse\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/inpatient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/inpatient",
+					"path": [
+						"nma",
+						"api",
+						"inpatient"
+					]
+				},
+				"description": "View all inpatients"
+			},
+			"response": [
+				{
+					"id": "55d18e2e-3af4-46cc-8152-5b0c64bd002b",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/inpatient",
+							"path": [
+								"nma",
+								"api",
+								"inpatient"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 1,\n            \"nursingUnit\": \"xxxxx\",\n            \"patient\": {\n                \"name\": \"Jack\"\n            },\n            \"bed\": {\n                \"room\": {\n                    \"roomNum\": 201\n                },\n                \"bedId\": \"A\"\n            },\n            \"nurse\": {\n                \"employee\": {\n                    \"name\": \"Marry\"\n                }\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/inpatient/available_bed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/inpatient/available_bed",
+					"path": [
+						"nma",
+						"api",
+						"inpatient",
+						"available_bed"
+					]
+				},
+				"description": "Check for available room/bed"
+			},
+			"response": [
+				{
+					"id": "7e66a2c2-3ab9-4fc0-a211-26c3d352c946",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/available_inpatient_bed",
+							"path": [
+								"nma",
+								"api",
+								"available_inpatient_bed"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 1,\n            \"room\": {\n                \"roomNum\": \"201\"\n            },\n            \"bedId\": \"A\"\n        },\n        {\n            \"seq\": 2,\n            \"room\": {\n                \"roomNum\": \"201\"\n            },\n            \"bedId\": \"C\"\n        },\n        {\n            \"seq\": 3,\n            \"room\": {\n                \"roomNum\": \"202\"\n            },\n            \"bedId\": \"B\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/inpatient/bed",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"inPatientSeq\": 1,\n\t\"bedSeq\": 7\n}"
+				},
+				"url": {
+					"raw": "/nma/api/inpatient/bed",
+					"path": [
+						"nma",
+						"api",
+						"inpatient",
+						"bed"
+					]
+				},
+				"description": "Assign a room and a bed to patient"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/inpatient/bed? inPatientSeq =1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/inpatient/bed?inPatientSeq=2",
+					"path": [
+						"nma",
+						"api",
+						"inpatient",
+						"bed"
+					],
+					"query": [
+						{
+							"key": "inPatientSeq",
+							"value": "2",
+							"equals": true
+						}
+					]
+				},
+				"description": "Remove bed from inpatient"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/inpatient/nurse",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"inPatientSeq\": 1,\n\t\"nurseSeq\": 2\n}"
+				},
+				"url": {
+					"raw": "/nma/api/inpatient/nurse",
+					"path": [
+						"nma",
+						"api",
+						"inpatient",
+						"nurse"
+					]
+				},
+				"description": "Assign a nurse to an inpatient"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/inpatient/nurse? inPatientSeq =1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/inpatient/nurse?inPatientSeq=1",
+					"path": [
+						"nma",
+						"api",
+						"inpatient",
+						"nurse"
+					],
+					"query": [
+						{
+							"key": "inPatientSeq",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": "Remove nurse from an inpatient"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/surgery/schedule?roomSeq=20&date=2017-08-12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/schedule?roomSeq=4&date=2018-08-22",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "roomSeq",
+							"value": "4",
+							"equals": true
+						},
+						{
+							"key": "date",
+							"value": "2018-08-22",
+							"equals": true
+						}
+					]
+				},
+				"description": "View scheduled surgery per room and per day"
+			},
+			"response": [
+				{
+					"id": "1c6ee27b-4767-4d73-8230-0403fadfd708",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/scheduled_surgery?roomSeq=20&date=2017-08-12",
+							"path": [
+								"nma",
+								"api",
+								"scheduled_surgery"
+							],
+							"query": [
+								{
+									"key": "roomSeq",
+									"value": "20",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "2017-08-12",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 20,\n            \"startDatetime\": \"2017-08-12 08:00:00\",\n            \"endDatetime\": \"2017-08-12 12:00:00\",\n            \"room\": {\n            \t\"seq\": 20,\n            \t\"roomNum\": 501\n            },\n            \"patient\": {\n            \t\"name\": \"Freddy\"\n            },\n            \"surgeon\": {\n            \t\"name\": \"Jack\"\n            },\n            \"type\": {\n            \t\"code\": 323,\n            \t\"category\": \"H\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/schedule?surgeonSeq=7&date=2017-08-12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/schedule?surgeonSeq=7&date=2017-08-12",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "surgeonSeq",
+							"value": "7",
+							"equals": true
+						},
+						{
+							"key": "date",
+							"value": "2017-08-12",
+							"equals": true
+						}
+					]
+				},
+				"description": "View all scheduled surgery per surgeon per day"
+			},
+			"response": [
+				{
+					"id": "b4f3e2f2-e468-43ea-8a15-0bcec990e1e8",
+					"name": "/nma/api/scheduled_surgery?surgeonSeq=7&date=2017-08-12",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/scheduled_surgery?surgeonSeq=7&date=2017-08-12",
+							"path": [
+								"nma",
+								"api",
+								"scheduled_surgery"
+							],
+							"query": [
+								{
+									"key": "surgeonSeq",
+									"value": "7",
+									"equals": true
+								},
+								{
+									"key": "date",
+									"value": "2017-08-12",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 20,\n            \"startDatetime\": \"2017-08-12 08:00:00\",\n            \"endDatetime\": \"2017-08-12 12:00:00\",\n            \"room\": {\n                \"seq\": 20,\n                \"roomNum\": 501\n            },\n            \"patient\": {\n                \"name\": \"Freddy\"\n            },\n            \"surgeon\": {\n                \"name\": \"Jack\"\n            },\n            \"type\": {\n                \"code\": \"xxxxxxx\",\n                \"category\": \"H\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/schedule?patientSeq=5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/schedule?patientSeq=1",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "patientSeq",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": "View all scheduled surgery per patient"
+			},
+			"response": [
+				{
+					"id": "7bda0b7d-bbd7-461d-a564-13b2fb241e86",
+					"name": "/nma/api/scheduled_surgery?patientSeq=5",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/scheduled_surgery?patientSeq=5",
+							"path": [
+								"nma",
+								"api",
+								"scheduled_surgery"
+							],
+							"query": [
+								{
+									"key": "patientSeq",
+									"value": "5",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 20,\n            \"startDatetime\": \"2017-08-12 08:00:00\",\n            \"endDatetime\": \"2017-08-12 12:00:00\",\n            \"room\": {\n                \"seq\": 20,\n                \"roomNum\": 501\n            },\n            \"patient\": {\n                \"name\": \"Freddy\"\n            },\n            \"surgeon\": {\n                \"name\": \"Jack\"\n            },\n            \"type\": {\n                \"code\": \"xxxxxx\",\n                \"category\": \"O\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/available_room?startDatetime=2017-09-12 09:00:00&endDatetime=2017-09-12 12:00:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/available_room?startDatetime=2018-08-22 07:00:00&endDatetime=2018-08-22 09:00:00",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"available_room"
+					],
+					"query": [
+						{
+							"key": "startDatetime",
+							"value": "2018-08-22 07:00:00",
+							"equals": true
+						},
+						{
+							"key": "endDatetime",
+							"value": "2018-08-22 09:00:00",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get all available surgery room on given datetime"
+			},
+			"response": [
+				{
+					"id": "a46d14b3-760b-4c31-b970-cc2fdb21cf4f",
+					"name": "/nma/api/available_surgery_room",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/available_surgery_room?datetime=2017-09-12 09:00:00",
+							"path": [
+								"nma",
+								"api",
+								"available_surgery_room"
+							],
+							"query": [
+								{
+									"key": "datetime",
+									"value": "2017-09-12 09:00:00",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n        \t\"seq\": 1,\n        \t\"roomNum\": 501\n        },\n        {\n        \t\"seq\": 3,\n        \t\"roomNum\": 512\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/available_surgeon?startDatetime=2018-08-12 09:00:00&endDatetime=2018-08-12 12:00:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/available_surgeon?startDatetime=2018-08-22 08:00:00&endDatetime=2018-08-22 10:00:00",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"available_surgeon"
+					],
+					"query": [
+						{
+							"key": "startDatetime",
+							"value": "2018-08-22 08:00:00",
+							"equals": true
+						},
+						{
+							"key": "endDatetime",
+							"value": "2018-08-22 10:00:00",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get all available surgeon on the given time"
+			},
+			"response": [
+				{
+					"id": "388d3b3b-ca4f-44cf-b727-fa33b6661fa9",
+					"name": "/nma/api/available_surgeon?datetime=2018-08-12 09:00:00",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/available_surgeon?datetime=2018-08-12 09:00:00",
+							"path": [
+								"nma",
+								"api",
+								"available_surgeon"
+							],
+							"query": [
+								{
+									"key": "datetime",
+									"value": "2018-08-12 09:00:00",
+									"equals": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 1,\n            \"employee\": {\n            \t\"name\": \"Jack\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/available_patient?startDatetime=2018-08-12 09:00:00&endDatetime=2018-08-12 12:00:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/available_patient?startDatetime=2018-08-22 08:00:00&endDatetime=2018-08-22 10:00:00",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"available_patient"
+					],
+					"query": [
+						{
+							"key": "startDatetime",
+							"value": "2018-08-22 08:00:00",
+							"equals": true
+						},
+						{
+							"key": "endDatetime",
+							"value": "2018-08-22 10:00:00",
+							"equals": true
+						}
+					]
+				},
+				"description": "View all available patient to perform a surgery during given time period"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/surgery/type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/type",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"type"
+					]
+				},
+				"description": "Get all surgery type"
+			},
+			"response": [
+				{
+					"id": "70e49b8d-d2e4-4d16-8c1e-cd7318d70280",
+					"name": "/nma/api/surgery_type",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/surgery_type",
+							"path": [
+								"nma",
+								"api",
+								"surgery_type"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n        \t\"seq\": 12,\n        \t\"code\": \"xxxxx\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/room",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgery/room",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"room"
+					]
+				},
+				"description": "View all surgery rooms"
+			},
+			"response": [
+				{
+					"id": "fbff40e7-8aaa-428b-98ee-5b69b02f6d93",
+					"name": "/nma/api/surgery_room",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/surgery_room",
+							"path": [
+								"nma",
+								"api",
+								"surgery_room"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"seq\": 2,\n            \"roomNum\": 501\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/nma/api/surgery/schedule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"patientSeq\": 10,\n\t\"startDatetime\": \"2018-09-12 09:00:00\",\n\t\"endDatetime\": \"2018-09-12 12:00:00\",\n\t\"surgeonSeq\": 2,\n\t\"roomSeq\": 5,\n\t\"surgeryTypeSeq\": 1\n}"
+				},
+				"url": {
+					"raw": "/nma/api/surgery/schedule",
+					"path": [
+						"nma",
+						"api",
+						"surgery",
+						"schedule"
+					]
+				},
+				"description": "Book a surgery"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/support_staff",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"employee\": {\n        \"ssn\": \"873659345\",\n\t    \"name\": \"Mario\",\n\t    \"gender\": \"M\",\n\t    \"address\": \"666 Hell Rd\",\n\t    \"tel\": \"2078638843\"\n\t},\n\t\"annualSalary\": 30000\n}"
+				},
+				"url": {
+					"raw": "/nma/api/support_staff",
+					"path": [
+						"nma",
+						"api",
+						"support_staff"
+					]
+				},
+				"description": "Add a new support staff"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/physician",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"employee\": {\n        \"ssn\": \"873651345\",\n\t    \"name\": \"Lucy\",\n\t    \"gender\": \"F\",\n\t    \"address\": \"100 Sichun Rd\",\n\t    \"tel\": \"9802264738\"\n\t},\n\t\"annualSalary\": 70000,\n\t\"specialty\": \"Psychokinesis\"\n}"
+				},
+				"url": {
+					"raw": "/nma/api/physician",
+					"path": [
+						"nma",
+						"api",
+						"physician"
+					]
+				},
+				"description": "Add a new physician"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/nurse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"employee\": {\n        \"ssn\": \"234566987\",\n\t    \"name\": \"Wenndy\",\n\t    \"gender\": \"F\",\n\t    \"address\": \"505 Lala Land\",\n\t    \"tel\": \"9087762245\"\n\t},\n\t\"annualSalary\": 20000,\n\t\"grade\": 78,\n\t\"year\": 1,\n\t\"surgeryType\": {\n\t\t\"seq\": 2\n\t}\n}"
+				},
+				"url": {
+					"raw": "/nma/api/nurse",
+					"path": [
+						"nma",
+						"api",
+						"nurse"
+					]
+				},
+				"description": "Add a new nurse"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/surgeon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"employee\": {\n        \"ssn\": \"746294753\",\n\t    \"name\": \"Christina\",\n\t    \"gender\": \"F\",\n\t    \"address\": \"653 Seven Ave\",\n\t    \"tel\": \"9828473345\"\n\t},\n\t\"specialty\": \"Heart Surgery\",\n\t\"contractType\": \"D\",\n\t\"contractYear\": 5\n}"
+				},
+				"url": {
+					"raw": "/nma/api/surgeon",
+					"path": [
+						"nma",
+						"api",
+						"surgeon"
+					]
+				},
+				"description": "Add a new surgeon"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/support_staff/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/support_staff/1",
+					"path": [
+						"nma",
+						"api",
+						"support_staff",
+						"1"
+					]
+				},
+				"description": "Remove the support staff and shift its job to another person"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/physician/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/physician/5",
+					"path": [
+						"nma",
+						"api",
+						"physician",
+						"5"
+					]
+				},
+				"description": "Remove the physician and shift its job to another person"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/nurse/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/nurse/2",
+					"path": [
+						"nma",
+						"api",
+						"nurse",
+						"2"
+					]
+				},
+				"description": "Remove the nurse and shift its job to another person"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/surgeon/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgeon/1",
+					"path": [
+						"nma",
+						"api",
+						"surgeon",
+						"1"
+					]
+				},
+				"description": "Remove the surgeon and shift its job to another person"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/symptom/illness",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/symptom/illness",
+					"path": [
+						"nma",
+						"api",
+						"symptom",
+						"illness"
+					]
+				},
+				"description": "Get all illnesses"
+			},
+			"response": [
+				{
+					"id": "49b7e730-0d29-4adb-ba40-22447145c586",
+					"name": "Basic",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "/nma/api/symptom/illness",
+							"path": [
+								"nma",
+								"api",
+								"symptom",
+								"illness"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"_postman_previewtype": "parsed",
+					"header": [],
+					"cookie": [],
+					"responseTime": 0,
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/nma/api/symptom/allergy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/symptom/allergy",
+					"path": [
+						"nma",
+						"api",
+						"symptom",
+						"allergy"
+					]
+				},
+				"description": "Get all allergies"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/surgeon/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/surgeon/1",
+					"path": [
+						"nma",
+						"api",
+						"surgeon",
+						"1"
+					]
+				},
+				"description": "Get surgeon"
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/support_staff/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/support_staff/1",
+					"path": [
+						"nma",
+						"api",
+						"support_staff",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/nurse/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/nurse/1",
+					"path": [
+						"nma",
+						"api",
+						"nurse",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/nma/api/physician/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "/nma/api/physician/1",
+					"path": [
+						"nma",
+						"api",
+						"physician",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
